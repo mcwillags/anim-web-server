@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hyi</h1>
+    <button id="fetchBtn">Fetch</button>
+    <script>
+       const fetchScript = (scriptPath) => new Promise((res) => {
+        const script = document.createElement('script');
+        script.onload = () => {
+            res(); 
+        }
+        script.src = scriptPath;
+        document.body.appendChild(script);
+
+    });
+
+    fetchScript(`http://localhost:${3000}/static/script.js`).then( () => {
+        console.log(this.BiBa);
+    })
+    </script>
+</body>
+</html>
