@@ -3,25 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation Test</title>
 </head>
 <body>
-    <h1>hyi</h1>
-    <button id="fetchBtn">Fetch</button>
+    <h1>Animation Test</h1>
+    <script src="http://localhost:3000/static/Animation.js"></script>
     <script>
-       const fetchScript = (scriptPath) => new Promise((res) => {
-        const script = document.createElement('script');
-        script.onload = () => {
-            res(); 
-        }
-        script.src = scriptPath;
-        document.body.appendChild(script);
-
-    });
-
-    fetchScript(`http://localhost:${3000}/static/script.js`).then( () => {
-        console.log(this.BiBa);
-    })
+        console.log('Animation test page loaded');
     </script>
 </body>
 </html>
